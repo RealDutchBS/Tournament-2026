@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toernooi Overzicht</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#111;
+    color:white;
+    margin:0;
+    padding:20px;
+}
+
+h1,h2{
+    text-align:center;
+}
+
+.section{
+    margin:40px 0;
+}
+
+.poules{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.poule{
+    padding:15px;
+    border-radius:10px;
+}
+
+.poule h3{
+    margin-top:0;
+}
+
+.match{
+    background:rgba(255,255,255,0.08);
+    padding:8px;
+    margin:5px 0;
+    border-radius:6px;
+}
+
+.score{
+    float:right;
+    font-weight:bold;
+}
+
+.bracket{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+}
+
+.round{
+    min-width:200px;
+}
+
+.round h3{
+    text-align:center;
+}
+
+.final{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:20px;
+    padding:15px;
+    background:gold;
+    color:black;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🏆 Toernooi Overzicht</h1>
+
+<div class="section">
+<h2>📋 Wedstrijd Info</h2>
+<p>
+Alle wedstrijden worden gespeeld met de ranked modifier.  
+In de poulefase geldt:
+<ul>
+<li>2-1 winst = 1 punt</li>
+<li>2-0 winst = 3 punten</li>
+</ul>
+Geen duidelijke winnaar? → Tiebreaker game.  
+Kwart en halve finale: ranked modifier + tiebreaker indien nodig.  
+Finale: Best of 5 (eerste tot 3 wins).
+</p>
+</div>
+
+<div class="section">
+<h2>🔵 Poules</h2>
+
+<div class="poules">
+
+<div class="poule" style="background:#0099cc;">
+<h3>Poule A</h3>
+<div class="match">1 vs 2 <span class="score">2-0</span></div>
+<div class="match">1 vs 3 <span class="score">2-1</span></div>
+<div class="match">2 vs 3 <span class="score">0-2</span></div>
+</div>
+
+<div class="poule" style="background:#00aa44;">
+<h3>Poule B</h3>
+<div class="match">4 vs 5 <span class="score">2-0</span></div>
+<div class="match">4 vs 6 <span class="score">1-2</span></div>
+<div class="match">5 vs 6 <span class="score">2-1</span></div>
+</div>
+
+<div class="poule" style="background:#7a3db8;">
+<h3>Poule C</h3>
+<div class="match">7 vs 8 <span class="score">2-0</span></div>
+<div class="match">7 vs 9 <span class="score">2-1</span></div>
+<div class="match">8 vs 9 <span class="score">0-2</span></div>
+</div>
+
+<div class="poule" style="background:#e6d400; color:black;">
+<h3>Poule D</h3>
+<div class="match">10 vs 11 <span class="score">2-0</span></div>
+<div class="match">10 vs 12 <span class="score">1-2</span></div>
+<div class="match">11 vs 12 <span class="score">2-1</span></div>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>🏁 Knock-Out Fase</h2>
+
+<div class="bracket">
+
+<div class="round">
+<h3>Kwartfinale</h3>
+<div class="match">Win A vs Runner B <span class="score">2-1</span></div>
+<div class="match">Win B vs Runner A <span class="score">2-0</span></div>
+<div class="match">Win C vs Runner D <span class="score">2-1</span></div>
+<div class="match">Win D vs Runner C <span class="score">2-0</span></div>
+</div>
+
+<div class="round">
+<h3>Halve Finale</h3>
+<div class="match">Win QF1 vs Win QF2 <span class="score">3-1</span></div>
+<div class="match">Win QF3 vs Win QF4 <span class="score">3-2</span></div>
+</div>
+
+<div class="round">
+<h3>Finale (BO5)</h3>
+<div class="match">Win SF1 vs Win SF2 <span class="score">3-2</span></div>
+</div>
+
+</div>
+
+<div class="final">
+🏆 Kampioen: Speler 7
+</div>
+
+</div>
+
+</body>
+</html>
